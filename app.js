@@ -140,9 +140,12 @@ async function loadSingleIssue(id) {
         console.error("Modal Error:", error);
     }
 }
-
+//7. spinner
 function toggleSpinner(show) {
     const spinner = document.getElementById('loading-spinner');
     if (show) spinner.classList.remove('hidden');
     else spinner.classList.add('hidden');
-}
+};
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("login-btn").addEventListener("click", handleLogin);
+});
