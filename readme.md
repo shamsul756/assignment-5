@@ -16,8 +16,9 @@ filter() :Used to select specific elements from an array.It returns a new array 
 
 forEach() :Used to loop through an array.It does not return a new array.Usually used for printing or performing actions.
 4️⃣ What is an arrow function?
-ans: 
+ans: In JavaScript, an arrow function is a shorter way to write a function using =>. It’s mostly used for simpler, cleaner functions, especially for callbacks
 
+5️⃣ What are template literals?
 
 
 
