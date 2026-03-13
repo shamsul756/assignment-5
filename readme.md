@@ -19,6 +19,7 @@ forEach() :Used to loop through an array.It does not return a new array.Usually 
 ans: In JavaScript, an arrow function is a shorter way to write a function using =>. It’s mostly used for simpler, cleaner functions, especially for callbacks
 
 5️⃣ What are template literals?
+In JavaScript, template literals are a way to create strings easily, especially  to combine variables or write multi-line text.
 
 
 
