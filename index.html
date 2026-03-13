@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<!-- heading part  -->
+<body class="bg-gray-50 min-h-screen">
+
+    <section id="login-section" class="flex items-center justify-center min-h-screen">
+        <div class="card w-96 bg-base-100 shadow-2xl p-8 border border-gray-100">
+            <div class="text-center mb-6">
+                <i class="fa-brands fa-github text-5xl mb-4"></i>
+                <h1 class="text-2xl font-bold">Issues Tracker</h1>
+                <p class="text-sm text-gray-400">Assignment-05 Login</p>
+            </div>
+            <div class="form-control w-full">
+                <label class="label"><span class="label-text font-semibold">Username</span></label>
+                <input type="text" id="username" placeholder="admin" class="input input-bordered w-full" />
+            </div>
+            <div class="form-control w-full mt-2">
+                <label class="label"><span class="label-text font-semibold">Password</span></label>
+                <input type="password" id="password" placeholder="admin123" class="input input-bordered w-full" />
+            </div>
+            <button onclick="handleLogin()" class="btn btn-primary w-full mt-6 text-white">Sign In</button>
+            <div class="mt-4 p-2 bg-blue-50 rounded text-xs text-blue-700 text-center">
+                Demo: admin / admin123
+            </div>
+        </div>
+    </section>
+
+  <!-- secound part  -->
+       <section id="dashboard-section" class="hidden">
+        <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+            <div class="navbar container mx-auto px-4">
+                <div class="flex-1">
+                    <a class="text-xl font-bold flex items-center gap-2">
+                        <i class="fa-brands fa-github text-2xl"></i> Issues Tracker
+                    </a>
+                </div>
+                <div class="flex-none gap-2">
+                    <div class="join">
+                        <input id="search-input" type="text" placeholder="Search issues..." class="input input-bordered join-item w-32 md:w-auto" />
+                        <button onclick="handleSearch()" class="btn btn-primary join-item text-white">Search</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 3 rd part  -->
+
+        <main class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 border-b pb-4 gap-4">
+                <div class="flex gap-2">
+                    <button onclick="filterIssues('all', this)" class="tab-btn btn btn-sm btn-ghost btn-primary border-primary">All</button>
+                    <button onclick="filterIssues('open', this)" class="tab-btn btn btn-sm btn-ghost">Open</button>
+                    <button onclick="filterIssues('closed', this)" class="tab-btn btn btn-sm btn-ghost">Closed</button>
+                </div>
+                <div id="status-counter" class="text-sm font-medium text-gray-600">
+                    </div>
+            </div>
+
+            <div id="loading-spinner" class="flex justify-center items-center py-20 hidden">
+                <span class="loading loading-bars loading-lg text-primary"></span>
+            </div>
+
+            <div id="issues-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                </div>
+        </main>
+    </section>
+
+<!-- 4 th part  -->
+ <dialog id="issue_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-3xl">
+            <div id="modal-content">
+                </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+   
+
+    <script src="app.js"></script>
+</body>
+</html>
