@@ -12,7 +12,13 @@ let : Introduced in ES6 (modern JavaScript).It is block scoped .The value can be
 3️⃣ What is the difference between map(), filter(), and forEach()?
  ans: map() : Used to create a new array. It transforms each element of the array. Always returns a new array.
 
-filter() :Used to select specific elements from an array.It returns a new array with elements that match the condition
+filter() :Used to select specific elements from an array.It returns a new array with elements that match the condition.
+
+forEach() :Used to loop through an array.It does not return a new array.Usually used for printing or performing action
+
+
+
+
 
 
 
