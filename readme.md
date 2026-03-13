@@ -14,7 +14,9 @@ let : Introduced in ES6 (modern JavaScript).It is block scoped .The value can be
 
 filter() :Used to select specific elements from an array.It returns a new array with elements that match the condition.
 
-forEach() :Used to loop through an array.It does not return a new array.Usually used for printing or performing action
+forEach() :Used to loop through an array.It does not return a new array.Usually used for printing or performing actions.
+4️⃣ What is an arrow function?
+ans: 
 
 
 
